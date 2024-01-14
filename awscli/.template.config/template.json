@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Felix Rabinovich",
+  "classifications": [ "AWS SDK", "Console" ],
+  "identity": "Virshu.ConsoleTemplate",
+  "name": "AWS CLI Starting Point",
+  "shortName": "awscli",
+  "sourceName":"$safeprojectname$",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "primaryOutputs": [
+	{ "path": "$safeprojectname$.csproj" }
+  ]
+}
