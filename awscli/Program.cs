@@ -44,6 +44,13 @@ configuration["value"] = "something";
 IServiceCollection services = new ServiceCollection();
 
 services.AddSingleton<I$safeprojectname$Service, $safeprojectname$Service>();
+// Use this as guidance for AWS service that you want to use
+// And pass through Dependency Injection to $safeprojectname$Service:
+// public class $safeprojectname$Service(IAmazonSecretsManager secret)
+/*
+services.AddSingleton<IAmazonSecretsManager>(_ => new AmazonSecretsManagerClient(awsCredentials, regionEndpoint));
+*/
+
 services.AddSingleton<IConfiguration>(configuration);
 
 ServiceProvider serviceProvider = services.BuildServiceProvider();
