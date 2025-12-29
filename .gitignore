@@ -4,3 +4,4 @@
 
 /awscli/.vs/$safeprojectname$
 /awscli/obj
+/awscli/.vs/$safeprojectname$.slnx
