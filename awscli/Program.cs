@@ -1,10 +1,11 @@
 ﻿using Amazon.Runtime.CredentialManagement;
+using Amazon.Runtime.Credentials;
 using CommandLine;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using $safeprojectname$;
 
-AWSCredentials awsCredentials = FallbackCredentialsFactory.GetCredentials();
+AWSCredentials awsCredentials = DefaultAWSCredentialsIdentityResolver.GetCredentials();
 RegionEndpoint regionEndpoint = FallbackRegionFactory.GetRegionEndpoint();
 
 Parser.Default.ParseArguments<CommandLineOptions>(args)
